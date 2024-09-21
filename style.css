@@ -20,10 +20,6 @@ a:hover{
     color:#CB612F;
     text-decoration: NONE;
 }
-.button{
-    background-color: white;
-    color: black;
-}
 .container-profil{
     display: flex;
     justify-content: space-evenly;
