@@ -370,7 +370,7 @@ a:hover{
 @media only screen and (max-width: 600px) {
     .container-profil{
         flex-direction: column;
-        padding-top: 90px;
+        padding-top: 100px;
     }
     .profil{
         justify-content: center;
