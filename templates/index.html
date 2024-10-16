@@ -21,18 +21,6 @@
       btn.addEventListener('click', () => {
           listmenu.style.display = 'block'
       })
-      function done_pesan(){
-            let kirim = $('#kirim').val()
-            $.ajax({
-                type: "POST",
-                url: "/submit",
-                data: {pesan_give : kirim},
-                success: function (response) {
-                    alert(response["msg"])
-                    window.location.reload()
-                }
-            });
-        }
     </script>
   </head>
   <body>
@@ -142,43 +130,37 @@
         </div>
       </section>
       <section class="form">
-        <form action="/submit" method="POST">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                />
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input
-                    type="email"
-                    name="email" 
-                    class="form-control"
-                    id="email"
-                    placeholder="name@example.com"
-                    required
-                />
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                    name="message" 
-                    class="form-control"
-                    id="message"
-                    rows="3"
-                    required
-                ></textarea>
-            </div>
-            <input id="kirim" >
-            <button  onclick="done_pesan()" type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </section>    
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Your Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Message</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+      </section>    
     </main>
     <footer class="site-footer">
       <div class="container">
